@@ -14,6 +14,7 @@ class Cart {
       const qty = this.products.filter((p) => p.id === product.id).length;
       this.createdCard(product, qty);
     });
+    this.calculateTotalPrice();
   }
 
   createdCard(data, qty) {
@@ -50,6 +51,11 @@ class Cart {
       </div>
       <button>Remove</button>
     </div>`;
+  }
+
+  calculateTotalPrice() {
+    const total = this.products.reduce((acc, cur) => acc + cur.price, 0);
+    this.price.innerText = total;
   }
 }
 
