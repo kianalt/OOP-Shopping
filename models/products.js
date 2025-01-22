@@ -1,11 +1,12 @@
-class Products {
-  constructor(parents, products, cart) {
-    this.parents = parents;
-    this.products = products;
+import Display from "./Display.js";
+
+class Products extends Display {
+  constructor(parent, products, cart) {
+    super(parent, products);
     this.cart = cart;
     // Bind the event handler to the class context
     this.handelEvent = this.handelEvent.bind(this);
-    this.parents.addEventListener("click", this.handelEvent);
+    this.parent.addEventListener("click", this.handelEvent);
   }
 
   showProducts() {
@@ -42,7 +43,7 @@ class Products {
     control.append(price, button);
     info.append(productName, control);
     cardElement.appendChild(info);
-    this.parents.appendChild(cardElement);
+    this.parent.appendChild(cardElement);
   }
 
   handelEvent(event) {

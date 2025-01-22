@@ -2,7 +2,6 @@ class Display {
   constructor(parent, products) {
     this.parent = parent;
     this.products = products;
-    this.parent.addEventListener("click", (event) => this.handleEvent(event));
   }
   showProducts() {
     // Remove repetitive products
