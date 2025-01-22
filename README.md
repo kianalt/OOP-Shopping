@@ -12,4 +12,6 @@ Total Price Calculation: The cart automatically calculates and displays the tota
 Live Demo
 You can view the live version of the project here:
 
+https://oop-shopping-eight.vercel.app/
+
 Shopping Cart Application - Live Demo
